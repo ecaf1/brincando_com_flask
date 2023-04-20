@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1f20;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            width: 500px;
+            margin: 0 auto;
+            background-color: #333;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 50px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            background-color: #1d1f20;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #f15500;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #fff;
+            color: #f15500;
+            border: 1px solid #f15500;
+        }
+
+        input[type="submit"]:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="{{ url_for('login') }}">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
